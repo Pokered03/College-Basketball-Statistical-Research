@@ -138,6 +138,7 @@ def basketball(fetch,seasons):
                 tid=sid(r.get(side+'_id'))
                 if tid:register(teams,tid,r.get(side+'_display_name') or tid,'NBA' if SPORT=='nba' else 'D-I',teams.get(tid,{}).get('conference') or sid(r.get(side+'_conference_id')),year)
             date,start=when(r.get('date',r.get('game_date_time')))
+            if str(r.get('time_valid')).lower() in ('false','0','0.0') or 'TBD' in str(r.get('status_type_short_detail','')).upper():start=None
             if not date:continue
             st=status(r.get('status_type_name'))
             g=game(r.get('game_id',r['id']),year,r['home_id'],r['away_id'],date,start,r.get('home_score'),r.get('away_score'),st,truth(r.get('neutral_site')),r.get('venue_full_name',''))
