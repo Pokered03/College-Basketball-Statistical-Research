@@ -1,0 +1,23 @@
+{
+  "sport": "cbb",
+  "database_bytes": 36171776,
+  "seasons": [
+    {
+      "season": 2024,
+      "games": 5731
+    },
+    {
+      "season": 2025,
+      "games": 5769
+    },
+    {
+      "season": 2026,
+      "games": 5767
+    },
+    {
+      "season": 2027,
+      "games": 1593
+    }
+  ],
+  "integrity": "ok"
+}

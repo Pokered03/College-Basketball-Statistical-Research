@@ -1,0 +1,9 @@
+{
+  "sport": "cbb",
+  "operation": "Active-season cached free-data refresh plus full chronological validation",
+  "seconds": 21.273035463998895,
+  "worker_peak_rss_mib": 306.0625,
+  "exit_code": 0,
+  "target_peak_rss_mib": 650,
+  "hosting_environment": false
+}
