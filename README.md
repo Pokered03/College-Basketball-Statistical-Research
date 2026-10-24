@@ -1,6 +1,6 @@
 # College Basketball Statistical Research Dashboard
 
-Status: **live development dashboard undergoing initial hosted verification; not complete.**
+Status: **live development dashboard with initial hosted verification; not complete.**
 
 This repository is a single-sport, standalone Streamlit research application. It has no runtime dependency on another project, no imports from another dashboard, and no access to the existing Multi-Sport Value Engine. Every project has its own SQLite file, worker, model, caches, dependency specification and optional refresh workflow.
 
@@ -46,7 +46,7 @@ No Odds API key is read, requested, or used. No paid data integration is enabled
 
 Bench points and observed completed-game rotations are now integrated where five reported starters and player points reconcile with the final score. The current preseason has no completed games; historical seasons have reported starter/minute/lineup-change context. These are observed roles, not next-game availability, official usage rate or calibrated injury effects.
 
-Unverified injury/availability feeds, some requested advanced inputs, public redistribution permissions, account-backed deployment, active refresh schedules and actual host-limit/browser checks remain unfinished. The full specification has not been completed.
+Unverified injury/availability feeds, some requested advanced inputs, real-device testing and sustained hosted load/stability checks remain unfinished. The full specification has not been completed.
 
 ## Confidence panels
 
@@ -68,27 +68,19 @@ Tests cover weighted aggregation, missing data, rank direction, duplicate/correc
 
 The local target is cold AppTest render under 10 seconds, matchup switching under 2 seconds, and peak web-process RSS under 350 MiB. Worker target is under 650 MiB. These are development targets, **not verified hosting limits**. Reports record actual measurements, environment and whether a hosted resource limit was tested. AppTest is functional UI verification, not a real MacBook/iPhone browser rendering test.
 
-## GitHub and deployment preparation
+## GitHub and live deployment
 
-Create a new repository named `College-Basketball-Statistical-Research` in the user’s GitHub account and push only this project. The current connected tools could not create new repositories; the browser required sign-in. No changes were made to the existing Multi-Sport Value Engine.
+Repository: https://github.com/Pokered03/College-Basketball-Statistical-Research
 
-A locally authenticated GitHub CLI can publish this prepared repository after its source/license/privacy choices are settled:
+Dashboard: https://college-basketball-statistical-research.streamlit.app/
 
-```bash
-gh repo create Pokered03/College-Basketball-Statistical-Research --private --source . --remote origin --push
-```
+Public visibility and free deployment were approved. The app uses Streamlit Community Cloud, main/app.py and Python 3.12. Initial live-browser, actual resource-limit, two-session and ordinary restart checks passed. See HOSTED_VALIDATION.md for the evidence and unfinished checks. No changes were made to the existing Multi-Sport Value Engine.
 
-Use Streamlit Community Cloud with branch `main`, entry file `app.py`, and Python 3.12. The root `requirements.txt` and `.streamlit/config.toml` are included. The supplied Dockerfile is an alternative for an existing approved hosting account. Neither platform has been provisioned for this project. Do not pay for hosting without explicit approval.
+## Independent automatic updates
 
-Verify the free account’s app count, privacy rules, sleeping behavior, actual memory allocation and execution quota before deployment. After deployment, test scheduled selection, manual comparisons, historical seasons, missing-data cases, mobile layout, repeated switching, concurrent sessions, restarts and actual hosting memory. Record the resulting independent URL; do not invent one.
+ENABLE_FREE_REFRESH=true is enabled. The daily cron is 10:47 UTC (6:47 AM Eastern daylight time / 5:47 AM standard time), subject to GitHub delays, inactivity policies and upstream data availability. Standard free public runners are configured; no cache/artifact storage, paid API or Odds API credits are used. Private-repository execution is blocked by the workflow condition. This is daily prepared-data updating, not instant game settlement.
 
-## Automatic schedule: prepared, OFF until free quota verified
-
-`.github/workflows/refresh.yml` is independent for this repository. Its scheduled and manual jobs are guarded by `ENABLE_FREE_REFRESH == 'true'`; no jobs will run until that repository variable is explicitly enabled. This prevents unapproved private-repository Actions charges. Confirm included minutes and a spending cap before enabling. The prepared cron is listed in that file in UTC. It is daily, not a real-time end-of-game service. More frequent updates need a verified free scheduler/quota and source freshness checks.
-
-The workflow commits the small prepared database and validation summary; Streamlit can redeploy from that commit. For long-term heavy use, monitor Git history growth and migrate the database to an independently managed approved object store. That storage integration is not configured.
-
-Do not mark this application complete until repository publication, automated refresh, real browser checks and actual hosted resource-limit testing have all passed.
+The worker restores the last published database, updates the current season, validates it and commits the compressed store, manifest and model report. Historical data and summaries stay available. Monitor Git history growth under long-term use; an approved independent object store can be added later. Full professional feature, device and stability completion is not claimed.
 
 ## Publishing prepared updates
 
@@ -97,3 +89,9 @@ After a successful data refresh, run `python scripts/package_data.py pack`. Comm
 ## Current season
 
 The 2026–27 season (ending year 2027) has no completed games in the source at this checkpoint. Choose an earlier season and Manual teams for historical comparisons. Upcoming 2027-season matchups show N/A and PASS until enough new-season observations exist. TBD start times are withheld rather than displayed as midnight.
+
+## Live verification
+
+https://college-basketball-statistical-research.streamlit.app/
+
+Read HOSTED_VALIDATION.md for observed tests and limits, and SIX_DASHBOARD_STATUS.md for the six-app development checkpoint. Real-device and sustained hosted load/stability verification remain unfinished.

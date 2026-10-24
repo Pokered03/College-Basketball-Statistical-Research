@@ -1,17 +1,19 @@
 # Deployment acceptance record
 
-- [x] Independent project directory and standalone runtime.
-- [x] Own SQLite database, worker, caches, model and tests.
-- [x] Free-source data integration and real historical backtest.
-- [ ] New GitHub repository created and push access confirmed.
-- [ ] Source/data redistribution and repository privacy approved where required.
-- [ ] Hosting account connected and no-charge capacity verified.
-- [ ] Independent Streamlit app provisioned; actual URL recorded.
-- [ ] Live desktop and iPhone browser tests passed.
-- [ ] Actual host memory, startup and repeated-switch tests passed.
-- [ ] Independent scheduler enabled within confirmed free execution quota.
-- [ ] Hosted refresh/restart/last-good-data recovery tested.
-- [ ] All requested advanced data and context feeds integrated or explicitly accepted as unavailable.
-- [ ] Confidence categories independently validated against historical market lines.
+- [x] Independent project directory, runtime, database, worker, model and bounded caches.
+- [x] Free-source integration, attribution and historical chronological backtest.
+- [x] Independent public GitHub repository and publication verified.
+- [x] Public visibility and free hosting authorized.
+- [x] Separate Streamlit deployment, Python 3.12 and actual URL verified.
+- [x] Initial live browser schedule/manual/history/missing-data checks.
+- [x] Initial actual hosting memory limit and process usage observed.
+- [x] Independent daily free refresh enabled; two hosted runs passed.
+- [x] Ordinary restart and two-session checks passed.
+- [x] Local package checksum, size, truncation and last-good-file recovery tests.
+- [ ] Real iPhone/MacBook-specific rendering and interaction checks.
+- [ ] Sustained multi-user load, long-term hosted stability and extended failure recovery.
+- [ ] All requested advanced availability/player/model integrations completed.
+- [ ] Current-season membership independently verified against official standings.
+- [ ] Confidence categories validated against verified historical market lines.
 
-A local server or AppTest pass does not tick the hosting checks. This record must remain incomplete until those tests actually run.
+See HOSTED_VALIDATION.md for measurements and limits. Initial live checks do not establish sustained reliability or full professional completion.
