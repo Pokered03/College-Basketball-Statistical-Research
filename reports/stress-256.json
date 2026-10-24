@@ -1,0 +1,47 @@
+{
+  "sport": "cbb",
+  "environment": "local Streamlit AppTest; not deployed hosting",
+  "cold_render_seconds": 0.2581130460002896,
+  "initial_matchup_render_seconds": 0.3669551709999723,
+  "switch_p95_seconds": 0.10895501100003457,
+  "switches": 256,
+  "rss_samples": [
+    {
+      "switch": 8,
+      "peak_rss_mib": 150.1484375
+    },
+    {
+      "switch": 16,
+      "peak_rss_mib": 157.98828125
+    },
+    {
+      "switch": 32,
+      "peak_rss_mib": 165.0
+    },
+    {
+      "switch": 64,
+      "peak_rss_mib": 168.91015625
+    },
+    {
+      "switch": 128,
+      "peak_rss_mib": 173.546875
+    },
+    {
+      "switch": 192,
+      "peak_rss_mib": 178.58203125
+    },
+    {
+      "switch": 256,
+      "peak_rss_mib": 183.1953125
+    }
+  ],
+  "peak_rss_mib": 183.1953125,
+  "db_mib": 34.49609375,
+  "targets": {
+    "cold_render_seconds": 10,
+    "switch_p95_seconds": 2,
+    "peak_rss_mib": 350
+  },
+  "actual_host_limits_tested": false,
+  "local_targets_pass": true
+}

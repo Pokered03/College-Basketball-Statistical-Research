@@ -1,7 +1,7 @@
 {
-  "software_tests_passed": 42,
+  "software_tests_passed": 43,
   "unrelated_adapter_tests_skipped": 3,
-  "test_seconds": 1.97,
+  "test_seconds": 1.92,
   "sqlite_integrity": "ok",
   "foreign_keys": "ok",
   "local_http_server": {
@@ -14,29 +14,29 @@
   "performance": {
     "sport": "cbb",
     "environment": "local Streamlit AppTest; not deployed hosting",
-    "cold_render_seconds": 0.3615384989989252,
-    "initial_matchup_render_seconds": 0.31962404099976993,
-    "switch_p95_seconds": 0.09278439300032915,
+    "cold_render_seconds": 0.3479572519991052,
+    "initial_matchup_render_seconds": 0.3117839480000839,
+    "switch_p95_seconds": 0.08408224999948288,
     "switches": 64,
     "rss_samples": [
       {
         "switch": 8,
-        "peak_rss_mib": 146.0625
+        "peak_rss_mib": 147.18359375
       },
       {
         "switch": 16,
-        "peak_rss_mib": 153.68359375
+        "peak_rss_mib": 154.84375
       },
       {
         "switch": 32,
-        "peak_rss_mib": 160.07421875
+        "peak_rss_mib": 161.25390625
       },
       {
         "switch": 64,
-        "peak_rss_mib": 161.484375
+        "peak_rss_mib": 162.703125
       }
     ],
-    "peak_rss_mib": 161.484375,
+    "peak_rss_mib": 162.703125,
     "db_mib": 34.49609375,
     "targets": {
       "cold_render_seconds": 10,
@@ -55,14 +55,32 @@
     "target_peak_rss_mib": 650,
     "hosting_environment": false
   },
-  "deployment_tested": false,
+  "deployment_tested": true,
   "mobile_browser_tested": false,
-  "scheduled_refresh_active": false,
-  "github_published": false,
+  "scheduled_refresh_active": true,
+  "github_published": true,
   "database_package": {
     "format": 1,
-    "sha256": "252689f9a95c5d7fe5ff6aaa578dcda3e4cddcdb976a48aa9fe4537a218d9588",
+    "sha256": "6ae01c17201c6e062fbfac670e1c640812f5cf4cb3d0faae165fc3b7ff79d052",
     "database_bytes": 36171776,
-    "compressed_bytes": 5831272
+    "compressed_bytes": 5827049
+  },
+  "hosted_initial_checks": {
+    "date": "2026-10-24",
+    "process_peak_mib": 176.0,
+    "exposed_host_limit_mib": 3072,
+    "container_sample_range_mib": [
+      727.1,
+      744.7
+    ],
+    "post_restart_process_peak_mib": 164.5,
+    "controlled_restart_passed": true,
+    "second_session_passed": true,
+    "current_season_missing_data_withheld": true,
+    "tbd_tipoff_withheld": true,
+    "first_refresh_seconds": 43,
+    "final_refresh_seconds": 54,
+    "worker_update": "2026-10-24T19:32:41.243220+00:00",
+    "sustained_load_tested": false
   }
 }
