@@ -74,3 +74,16 @@ def test_official_mlb_totals_keep_scope_and_missing_values(tmp_path):
     assert r[0]['payload']['metrics']['hr']==1
     assert r[0]['payload']['hitting_games']==162
     assert r[0]['payload']['metrics']['fip']==pytest.approx(4.)
+
+
+@pytest.mark.skipif(SPORT not in ('nba','cbb'),reason='Basketball schedule only')
+def test_basketball_tbd_time_keeps_date_without_midnight():
+    class Fake:
+        def parquet(self,url):
+            if 'schedules/' in url:
+                return pd.DataFrame([{'id':10,'game_id':10,'home_id':1,'away_id':2,'home_display_name':'A','away_display_name':'B','date':'2026-11-02T05:00Z','time_valid':False,'status_type_short_detail':'TBD','status_type_name':'STATUS_SCHEDULED','home_conference_id':1,'away_conference_id':1}])
+            if 'standings/' in url:
+                return pd.DataFrame([{'team_id':i,'team_display_name':str(i),'group_name':'D-I','group_id':1} for i in [1,2]])
+            return pd.DataFrame()
+    teams,games,boxes=basketball(Fake(),[2027])
+    assert games['10']['start'] is None and games['10']['date']=='2026-11-02'
