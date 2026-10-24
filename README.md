@@ -1,6 +1,6 @@
 # College Basketball Statistical Research Dashboard
 
-Status: **independently implemented and locally tested development build; not deployed; not complete.**
+Status: **live development dashboard undergoing initial hosted verification; not complete.**
 
 This repository is a single-sport, standalone Streamlit research application. It has no runtime dependency on another project, no imports from another dashboard, and no access to the existing Multi-Sport Value Engine. Every project has its own SQLite file, worker, model, caches, dependency specification and optional refresh workflow.
 
@@ -93,3 +93,7 @@ Do not mark this application complete until repository publication, automated re
 ## Publishing prepared updates
 
 After a successful data refresh, run `python scripts/package_data.py pack`. Commit the compressed store, its manifest and the backtest report. The workflow unpacks the last published database before updating so historical seasons remain available. A process lock, checksum validation, 256 MiB expansion cap and atomic replacement preserve the last good local file when a package is damaged. Neither the expanded database nor local package-state files are committed. After imported engine code changes, reboot this independent deployment; ordinary data packages invalidate caches through the expanded file revision.
+
+## Current season
+
+The 2026–27 season (ending year 2027) has no completed games in the source at this checkpoint. Choose an earlier season and Manual teams for historical comparisons. Upcoming 2027-season matchups show N/A and PASS until enough new-season observations exist. TBD start times are withheld rather than displayed as midnight.

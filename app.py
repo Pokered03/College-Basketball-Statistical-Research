@@ -50,6 +50,9 @@ try:
     if not available:st.warning('No schedules available.');st.stop()
     control=st.columns([1,1,2])
     season=control[0].selectbox('Season (ending year)',available)
+    selected_coverage=next((c for c in status.get('coverage',[]) if c['season']==season),{})
+    if selected_coverage.get('teams_with_completed_games')==0:
+        st.info('No completed games are published for this season yet. Upcoming schedules and manual team selection remain available; statistics show N/A and confidence stays PASS. Select an earlier season for historical research.')
     selected_date=control[1].date_input('Research date (Eastern)',now.date())
     mode=control[2].radio('Comparison mode',['Scheduled matchup','Manual teams'],horizontal=True)
     roster=teams(season,rev);names={t['id']:t['name'] for t in roster};info={t['id']:t for t in roster}
