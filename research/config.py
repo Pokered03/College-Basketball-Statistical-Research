@@ -1,0 +1,6 @@
+SPORT='cbb'
+TITLE='College Basketball Statistical Research Dashboard'
+EXPECTED_TEAMS=None
+DEFAULT_SEASONS=[2024, 2025, 2026, 2027]
+MIN_TEAM_GAMES=5
+ACTIVE_SEASON=2027
