@@ -1,11 +1,11 @@
 {
-  "n": 6257,
-  "brier": 0.1955280938363963,
+  "n": 6307,
+  "brier": 0.19536398964200177,
   "baseline_brier": 0.25,
-  "accuracy": 0.6944222470832667,
-  "margin_mae": 9.389059933903702,
-  "total_mae": 13.604019246305404,
-  "ece": 0.0245228724165748,
+  "accuracy": 0.6946250198192484,
+  "margin_mae": 9.398536088783754,
+  "total_mae": 13.602988770570034,
+  "ece": 0.024394942243700094,
   "calibration_bins": [
     {
       "lower": 0.0,
@@ -15,68 +15,68 @@
     },
     {
       "lower": 0.1,
-      "n": 170,
-      "predicted": 0.15838106879332736,
-      "observed": 0.1588235294117647
+      "n": 171,
+      "predicted": 0.15860459481693737,
+      "observed": 0.15789473684210525
     },
     {
       "lower": 0.2,
-      "n": 380,
-      "predicted": 0.2556053577109886,
-      "observed": 0.25263157894736843
+      "n": 387,
+      "predicted": 0.2557602564370513,
+      "observed": 0.2558139534883721
     },
     {
       "lower": 0.3,
-      "n": 630,
-      "predicted": 0.35212733962070925,
-      "observed": 0.4238095238095238
+      "n": 633,
+      "predicted": 0.35215877983113525,
+      "observed": 0.42338072669826227
     },
     {
       "lower": 0.4,
-      "n": 886,
-      "predicted": 0.45167388872242775,
-      "observed": 0.47742663656884876
+      "n": 893,
+      "predicted": 0.45141868140759694,
+      "observed": 0.47816349384098544
     },
     {
       "lower": 0.5,
-      "n": 940,
-      "predicted": 0.5508458453680986,
-      "observed": 0.5936170212765958
+      "n": 942,
+      "predicted": 0.5508395400246756,
+      "observed": 0.5934182590233545
     },
     {
       "lower": 0.6,
-      "n": 1049,
-      "predicted": 0.6494775585358367,
-      "observed": 0.665395614871306
+      "n": 1054,
+      "predicted": 0.6494869278295624,
+      "observed": 0.6660341555977229
     },
     {
       "lower": 0.7,
-      "n": 964,
-      "predicted": 0.7484454978878504,
-      "observed": 0.7593360995850622
+      "n": 970,
+      "predicted": 0.7484585131561017,
+      "observed": 0.7577319587628866
     },
     {
       "lower": 0.8,
-      "n": 810,
-      "predicted": 0.8479812593380677,
-      "observed": 0.8555555555555555
+      "n": 822,
+      "predicted": 0.8479282946303839,
+      "observed": 0.8564476885644768
     },
     {
       "lower": 0.9,
-      "n": 392,
-      "predicted": 0.9380136975658193,
-      "observed": 0.9642857142857143
+      "n": 399,
+      "predicted": 0.9378955937248025,
+      "observed": 0.9649122807017544
     }
   ],
-  "margin_interval_80_coverage": 0.8083746204251239,
+  "margin_interval_80_coverage": 0.8076740130014269,
   "version": "adjusted-score-v1",
   "status": "tested",
   "gate": true,
   "calibration_n": 7709,
   "calibration_through": "2025-02-11",
   "test_from": "2025-02-12",
-  "test_through": "2026-11-20",
-  "oos_games": 13966,
+  "test_through": "2026-11-25",
+  "oos_games": 14016,
   "calibrator": {
     "intercept": -0.4747200026967129,
     "slope": 1.1457980945331385
@@ -86,8 +86,8 @@
   "margin_q90": 12.884140194727378,
   "total_q10": -21.012488358484404,
   "total_q90": 21.271959099616478,
-  "baseline_margin_mae": 10.999835895089292,
-  "baseline_total_mae": 15.233785258334123,
+  "baseline_margin_mae": 11.009621487847998,
+  "baseline_total_mae": 15.229284738049406,
   "reason": "Gate requires >=200 calibration and test games, ECE <=0.10, Brier better than 50%, successful calibration. Thresholds are engineering safeguards, not proof of profitability.",
   "exclusions": "Draws excluded from win calibration; all scoring includes overtime/shootout scores as reported. No historical market prices are available; spread/total category reliability is unvalidated.",
   "market_validation": {
@@ -109,12 +109,12 @@
     }
   },
   "early": {
-    "n": 912,
-    "margin_mae": 10.87584615000812
+    "n": 962,
+    "margin_mae": 10.86069729140444
   },
   "late": {
     "n": 5345,
     "margin_mae": 9.135374427994025
   },
-  "generated_at": "2026-11-24T20:53:44.206247+00:00"
+  "generated_at": "2026-11-25T20:14:21.965990+00:00"
 }
